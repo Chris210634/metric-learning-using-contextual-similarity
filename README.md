@@ -26,7 +26,7 @@ Run `download_data.sh` to download all four datasets. Note that there are two pl
 
 `sample_outputs` contains sample outputs of `main.py`.
 
-Saved models of our implementation for all four datasets can be found here: [link] (https://github.com/Chris210634/metric-learning-using-contextual-similarity/releases/tag/v1.0.0).
+Saved models of our implementation for all four datasets can be found here: [link](https://github.com/Chris210634/metric-learning-using-contextual-similarity/releases/tag/v1.0.0).
 
 `data/*.txt` are the data-splits we used.
 
