@@ -1,7 +1,6 @@
-# metric-learning-using-contextual-similarity-archived
-This is for my reference, I will create public repo later
+# Supervised Metric Learning for Retrieval via Contextual Similarity Optimization
 
-```TODO``` illustration here.
+![](https://github.com/Chris210634/metric-learning-using-contextual-similarity/raw/main/jaccard.png)
 
 ## Downloading Data
 Run `download_data.sh` to download all four datasets. Note that there are two places you need to edit before running this script: (1) replace `<data_dir>` with the location where you want the data to live, generally speaking you want fast I/O to this location, e.g. scratch disk; (2) replace `<git_dir>` with the location of your local git clone (this directory). SOP, CUB and Cars are fast; iNaturalist will take 2-4 hours to download and process.
