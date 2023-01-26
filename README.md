@@ -1,11 +1,11 @@
 # Supervised Metric Learning for Retrieval via Contextual Similarity Optimization
 
-![](https://github.com/Chris210634/metric-learning-using-contextual-similarity/raw/main/jaccard.png)
+![](https://github.com/Chris210634/metric-learning-using-contextual-similarity/raw/main/intuition.png)
 
 ## Downloading Data
 Run `download_data.sh` to download all four datasets. Note that there are two places you need to edit before running this script: (1) replace `<data_dir>` with the location where you want the data to live, generally speaking you want fast I/O to this location, e.g. scratch disk; (2) replace `<git_dir>` with the location of your local git clone (this directory). SOP, CUB and Cars are fast; iNaturalist will take 2-4 hours to download and process. For In-Shop, you must download the images manually from the authors' link (img.zip not img_highres.zip)
 
-## Running our Algorithm
+## Running our Algorithm (256 x 256 image resolution)
 `main.py` is the main python script containing our implementation. Here is how you run it to reproduce our results:
 
 ### CUB
