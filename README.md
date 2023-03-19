@@ -5,6 +5,11 @@
 ## Downloading Data
 Run `download_data.sh` to download all four datasets. Note that there are two places you need to edit before running this script: (1) replace `<data_dir>` with the location where you want the data to live, generally speaking you want fast I/O to this location, e.g. scratch disk; (2) replace `<git_dir>` with the location of your local git clone (this directory). SOP, CUB and Cars are fast; iNaturalist will take 2-4 hours to download and process. For In-Shop, you must download the images manually from the authors' link (img.zip not img_highres.zip)
 
+We provide code for both 224 x 224 and 256 x 256 results.
+
+## Running our Algorithm (224 x 224 image resolution)
+coming soon
+
 ## Running our Algorithm (256 x 256 image resolution)
 `main.py` is the main python script containing our implementation. Here is how you run it to reproduce our results:
 
