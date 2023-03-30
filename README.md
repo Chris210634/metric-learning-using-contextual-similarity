@@ -10,7 +10,23 @@ Run `download_data.sh` to download all four datasets. Note that there are two pl
 We provide code for both 224 x 224 and 256 x 256 results.
 
 ## Running our Algorithm (224 x 224 image resolution)
-coming soon
+Our 224x224 setup follows the Proxy-Anchor implementation on GitHub: [link](https://github.com/tjddus9597/Proxy-Anchor-CVPR2020). They are located in the `224x224` folder.
+
+### CUB
+```
+cd 224x224
+python train.py --loss Hybrid --dataset cub --batch-size 128 --eps 0.04 --lam 0.05 --lr 0.00014 --warm 0 --bn-freeze 1 --gamma 0.1 --testfreq 10 --lr-decay-step 10 --epochs 60 --lr-decay-gamma 0.3 --xform_scale 0.16 --bottleneck linear --data_root <data_dir>/CUB_200_2011
+```
+### Cars
+```
+cd 224x224
+python train.py --loss Hybrid --dataset cars --batch-size 64 --eps 0.05 --lam 0.2 --lr 8e-05 --warm 0 --bn-freeze 1 --gamma 0.1 --testfreq 10 --lr-decay-step 20 --epochs 160 --lr-decay-gamma 0.5 --xform_scale 0.12 --bottleneck linear --data_root <data_dir>/car196
+```
+### SOP
+```
+cd 224x224
+python train.py --loss Hybrid --dataset SOP --batch-size 128 --eps 0.05 --lam 0.2 --lr 6e-05 --warm 0 --bn-freeze 1 --gamma 0.1 --testfreq 5 --lr-decay-step 15 --epochs 80 --lr-decay-gamma 0.3 --xform_scale 0.08 --bottleneck identity --hierarchical 1 --data_root <data_dir>/Stanford_Online_Products
+```
 
 ## Running our Algorithm (256 x 256 image resolution)
 `main.py` is the main python script containing our implementation. Here is how you run it to reproduce our results:
