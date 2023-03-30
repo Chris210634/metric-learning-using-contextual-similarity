@@ -59,7 +59,7 @@ We carefully tuned our baselines for results in Tables 2 and 3. The optimal hype
 | Hybrid (Contextual) | 8e-05 | linear | 0.1 | 4 | 0 |
 
 | SOP | learning rate | bottleneck | gamma | samples per class | warm start epochs | hierarchical sampling | number epochs | Learning rate decay step |
-| ---- | ---- | ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | --loss | --lr | --bottleneck | --gamma | --IPC | --warm | --hierarchical | --epochs | --lr-decay-step | 
 | Contrastive | 4e-05 | identity | 0.0 | 4 | 0 | 1  | 80 | 15 |
 | Roadmap | 4e-05 | identity | 0.1 | 4 | 0 | 1  | 80 | 15 |
