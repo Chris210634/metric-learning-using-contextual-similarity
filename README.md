@@ -56,7 +56,18 @@ We carefully tuned our baselines for results in Tables 2 and 3. The optimal hype
 | MS+miner | 8e-05 | linear | 0.0 | 4 | 0 |
 | Proxy_Anchor | 8e-05 | linear | 0.0 | 0 | 10 |
 | Proxy_NCA | 0.00016 | linear | 0.0 | 0 | 10 |
-| Hybrid | 8e-05 | linear | 0.1 | 4 | 0 |
+| Hybrid (Contextual) | 8e-05 | linear | 0.1 | 4 | 0 |
+
+| SOP | learning rate | bottleneck | gamma | samples per class | warm start epochs | hierarchical sampling | number epochs | Learning rate decay step |
+| ---- | ---- | ---- | ---- | ---- | ---- |
+| --loss | --lr | --bottleneck | --gamma | --IPC | --warm | --hierarchical | --epochs | --lr-decay-step | 
+| Contrastive | 4e-05 | identity | 0.0 | 4 | 0 | 1  | 80 | 15 |
+| Roadmap | 4e-05 | identity | 0.1 | 4 | 0 | 1  | 80 | 15 |
+| Triplet | 4e-05 | identity | 0.1 | 4 | 0 | 1  | 80 | 15 |
+| MS+miner | 8e-05 | identity | 0.0 | 4 | 0 | 1  | 80 | 15 |
+| Proxy_Anchor | 0.00016 | identity | 0.0 | 0 | 1 | 0  | 115 | 21 |
+| Proxy_NCA | 0.00016 | identity | 0.0 | 0 | 1 | 0  | 115 | 21 |
+| Hybrid (Contextual) | 6e-05 | identity | 0.1 | 4 | 0 | 1  | 80 | 15 |
 
 ## Running our Algorithm (256 x 256 image resolution)
 `main.py` is the main python script containing our implementation. Here is how you run it to reproduce our results:
