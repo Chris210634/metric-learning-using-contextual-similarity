@@ -39,14 +39,13 @@ We carefully tuned our baselines for results in Tables 2 and 3. The optimal hype
 | CUB | learning rate | warm start epochs | samples per class | gamma | bottleneck |
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | --loss | --lr | --warm | --IPC | --gamma | --bottleneck |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-| Contrastive  | 2e-5 | 'linear' | 0.0 | 4 | 0 | 
-| Roadmap | 2e-5 | 'linear' | 0.1 | 4 | 0 | 
-| Triplet' | 8e-5 | 'identity' | 0.1 | 4 | 0 | 
-| MS+miner' | 0.00016 | 'linear' | 0.0 | 4 | 0 | 
-| Proxy_Anchor' | 0.00016 | 'linear' | 0.0 |  0 |  10 | 
-| Proxy_NCA' | 0.00016 | 'linear' |  0.0 |  0 |  10 | 
-| Hybrid (Contextual) | 0.00014 | 'linear' |  0.1 |  4 |  0 | 
+| Contrastive  | 2e-5 | linear | 0.0 | 4 | 0 | 
+| Roadmap | 2e-5 | linear | 0.1 | 4 | 0 | 
+| Triplet | 8e-5 | identity | 0.1 | 4 | 0 | 
+| MS+miner | 0.00016 | linear | 0.0 | 4 | 0 | 
+| Proxy_Anchor | 0.00016 | linear | 0.0 |  0 |  10 | 
+| Proxy_NCA | 0.00016 | linear |  0.0 |  0 |  10 | 
+| Hybrid (Contextual) | 0.00014 | linear |  0.1 |  4 |  0 | 
 
 ## Running our Algorithm (256 x 256 image resolution)
 `main.py` is the main python script containing our implementation. Here is how you run it to reproduce our results:
