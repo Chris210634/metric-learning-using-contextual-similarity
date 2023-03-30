@@ -15,18 +15,37 @@ Our 224x224 setup follows the Proxy-Anchor implementation on GitHub: [link](http
 ### CUB
 ```
 cd 224x224
-python train.py --loss Hybrid --dataset cub --batch-size 128 --eps 0.04 --lam 0.05 --lr 0.00014 --warm 0 --bn-freeze 1 --gamma 0.1 --testfreq 10 --lr-decay-step 10 --epochs 60 --lr-decay-gamma 0.3 --xform_scale 0.16 --bottleneck linear --data_root <data_dir>/CUB_200_2011
+python train.py --loss Hybrid --dataset cub --batch-size 128 --eps 0.04 --lam 0.05 \
+--lr 0.00014 --warm 0 --bn-freeze 1 --gamma 0.1 --testfreq 10 --lr-decay-step 10 \
+--epochs 60 --lr-decay-gamma 0.3 --xform_scale 0.16 --bottleneck linear --data_root <data_dir>/CUB_200_2011
 ```
 ### Cars
 ```
 cd 224x224
-python train.py --loss Hybrid --dataset cars --batch-size 64 --eps 0.05 --lam 0.2 --lr 8e-05 --warm 0 --bn-freeze 1 --gamma 0.1 --testfreq 10 --lr-decay-step 20 --epochs 160 --lr-decay-gamma 0.5 --xform_scale 0.12 --bottleneck linear --data_root <data_dir>/car196
+python train.py --loss Hybrid --dataset cars --batch-size 64 --eps 0.05 --lam 0.2 \
+--lr 8e-05 --warm 0 --bn-freeze 1 --gamma 0.1 --testfreq 10 --lr-decay-step 20 \
+--epochs 160 --lr-decay-gamma 0.5 --xform_scale 0.12 --bottleneck linear --data_root <data_dir>/car196
 ```
 ### SOP
 ```
 cd 224x224
-python train.py --loss Hybrid --dataset SOP --batch-size 128 --eps 0.05 --lam 0.2 --lr 6e-05 --warm 0 --bn-freeze 1 --gamma 0.1 --testfreq 5 --lr-decay-step 15 --epochs 80 --lr-decay-gamma 0.3 --xform_scale 0.08 --bottleneck identity --hierarchical 1 --data_root <data_dir>/Stanford_Online_Products
+python train.py --loss Hybrid --dataset SOP --batch-size 128 --eps 0.05 --lam 0.2 \
+--lr 6e-05 --warm 0 --bn-freeze 1 --gamma 0.1 --testfreq 5 --lr-decay-step 15 \
+--epochs 80 --lr-decay-gamma 0.3 --xform_scale 0.08 --bottleneck identity --hierarchical 1 --data_root <data_dir>/Stanford_Online_Products
 ```
+### Baselines
+We carefully tuned our baselines for results in Tables 2 and 3. The optimal hyperparameters for each baseline is different. They are listed in the tables below:
+
+| CUB | learning rate | warm start epochs | samples per class | gamma | bottleneck |
+| --loss | --lr | --warm | --IPC | --gamma | --bottleneck |
+| ---- | ---- | ---- | ---- | ---- | ---- |
+| Contrastive  | 2e-5 | 'linear' | 0.0 | 4 | 0 | 
+| Roadmap | 2e-5 | 'linear' | 0.1 | 4 | 0 | 
+| Triplet' | 8e-5 | 'identity' | 0.1 | 4 | 0 | 
+| MS+miner' | 0.00016 | 'linear' | 0.0 | 4 | 0 | 
+| Proxy_Anchor' | 0.00016 | 'linear' | 0.0 |  0 |  10 | 
+| Proxy_NCA' | 0.00016 | 'linear' |  0.0 |  0 |  10 | 
+| Hybrid (Contextual) | 0.00014 | 'linear' |  0.1 |  4 |  0 | 
 
 ## Running our Algorithm (256 x 256 image resolution)
 `main.py` is the main python script containing our implementation. Here is how you run it to reproduce our results:
