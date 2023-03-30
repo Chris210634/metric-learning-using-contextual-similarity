@@ -47,6 +47,17 @@ We carefully tuned our baselines for results in Tables 2 and 3. The optimal hype
 | Proxy_NCA | 0.00016 | linear |  0.0 |  0 |  10 | 
 | Hybrid (Contextual) | 0.00014 | linear |  0.1 |  4 |  0 | 
 
+| Cars | learning rate | bottleneck | gamma | samples per class | warm start epochs | 
+| ---- | ---- | ---- | ---- | ---- | ---- |
+| --loss | --lr | --bottleneck | --gamma | --IPC | --warm | 
+| Contrastive | 8e-05 | linear | 0.1 | 4 | 0 |
+| Roadmap | 2e-05 | linear | 0.0 | 4 | 0 |
+| Triplet | 8e-05 | identity | 0.1 | 4 | 0 |
+| MS+miner | 8e-05 | linear | 0.0 | 4 | 0 |
+| Proxy_Anchor | 8e-05 | linear | 0.0 | 0 | 10 |
+| Proxy_NCA | 0.00016 | linear | 0.0 | 0 | 10 |
+| Hybrid | 8e-05 | linear | 0.1 | 4 | 0 |
+
 ## Running our Algorithm (256 x 256 image resolution)
 `main.py` is the main python script containing our implementation. Here is how you run it to reproduce our results:
 
