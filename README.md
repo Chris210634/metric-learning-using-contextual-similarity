@@ -36,9 +36,9 @@ python train.py --loss Hybrid --dataset SOP --batch-size 128 --eps 0.05 --lam 0.
 ### Baselines
 We carefully tuned our baselines for results in Tables 2 and 3. The optimal hyperparameters for each baseline is different. They are listed in the tables below:
 
-| CUB | learning rate | warm start epochs | samples per class | gamma | bottleneck |
+| CUB | learning rate | bottleneck | gamma | samples per class | warm start epochs | 
 | ---- | ---- | ---- | ---- | ---- | ---- |
-| --loss | --lr | --warm | --IPC | --gamma | --bottleneck |
+| --loss | --lr | --bottleneck | --gamma | --IPC | --warm | 
 | Contrastive  | 2e-5 | linear | 0.0 | 4 | 0 | 
 | Roadmap | 2e-5 | linear | 0.1 | 4 | 0 | 
 | Triplet | 8e-5 | identity | 0.1 | 4 | 0 | 
