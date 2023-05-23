@@ -119,7 +119,7 @@ def evaluate_cos(model, dataloader):
     xs = []
     
     cos_sim = F.linear(X, X)
-    Y = T[cos_sim.topk(1 + K)[1][:,1:]]
+    Y = T[cos_sim.cpu().topk(1 + K)[1][:,1:]]
     Y = Y.float().cpu()
     
     recall = []
@@ -199,14 +199,14 @@ def evaluate_cos_SOP(model, dataloader):
             xs.append(x)            
             xs = torch.stack(xs,dim=0)
             cos_sim = F.linear(xs,X)
-            y = T[cos_sim.topk(1 + K)[1][:,1:]]
+            y = T[cos_sim.cpu().topk(1 + K)[1][:,1:]]
             Y.append(y.float().cpu())
             xs = []
             
     # Last Loop
     xs = torch.stack(xs,dim=0)
     cos_sim = F.linear(xs,X)
-    y = T[cos_sim.topk(1 + K)[1][:,1:]]
+    y = T[cos_sim.cpu().topk(1 + K)[1][:,1:]]
     Y.append(y.float().cpu())
     Y = torch.cat(Y, dim=0)
 
