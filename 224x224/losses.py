@@ -252,9 +252,7 @@ class HybridLoss(nn.Module):
         context_loss = contrastive_jaccard(scores, w, k=self.k, eps=self.eps) ###
         lambda_loss = margin_contrastive(scores, w, pos_margins=self.pos_margin, neg_margins=self.neg_margin)
         loss = self.lam * lambda_loss + (1. - self.lam) * context_loss
-        
-        scores.retain_grad()
-        return loss, scores, w
+        return loss
     
 def get_ap_logging(scores, w):
     crit = HeavisideAP()

@@ -301,7 +301,7 @@ for epoch in range(0, args.nb_epochs):
         m = bottleneck(model(x.squeeze().cuda()))
         
         ####################################################################################
-        criterion_loss, scores, w = criterion(m, y.squeeze().cuda())
+        criterion_loss = criterion(m, y.squeeze().cuda())
         loss = criterion_loss + args.gamma * losses.get_reg_loss(m, y.squeeze().cuda(), args.regsim)
         ####################################################################################
         
