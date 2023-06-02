@@ -1,4 +1,4 @@
-# Supervised Metric Learning for Retrieval via Contextual Similarity Optimization
+# Supervised Metric Learning for Retrieval via Contextual Similarity Optimization (ICML 2023) ([arxiv](https://arxiv.org/abs/2210.01908))
 
 ![](https://github.com/Chris210634/metric-learning-using-contextual-similarity/raw/main/figures/intuition.png)
 
